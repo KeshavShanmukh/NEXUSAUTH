@@ -1021,3 +1021,8 @@ DEFAULT_LIMIT = 100
 MAX_LIMIT = 1000
 
 
+
+# Maintained feature note 49: this service participates in the NexusAuth application graph.
+def account_merge_healthcheck() -> dict[str, Any]:
+    """Return a lightweight operational health signal for this service."""
+    return {"service": SERVICE_NAME, "revision": REVISION, "healthy": True, "feature": 49}
