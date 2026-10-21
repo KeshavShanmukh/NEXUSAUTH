@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth & Platform Usage Management Console | RBAC & Concurrency Quota Engine</title>
+  <meta name="description" content="Enterprise authentication, RBAC administration, and concurrency-safe usage tracking and quota management system." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+</head>
+<body>
+
+  <!-- Top Persona Quick Switcher Bar for Seamless Pairing & Live Testing -->
+  <div id="persona-switcher-bar"></div>
+
+  <!-- Primary Application Header -->
+  <header class="app-header">
+    <div class="container flex-between">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <span>NexusAuth</span>
+          <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 500; margin-left: 0.35rem;">Usage Engine</span>
+        </div>
+      </div>
+      <div id="nav-right" class="nav-links"></div>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main id="main-content" role="main"></main>
+
+  <!-- Global Modal Dialog -->
+  <div id="app-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title" style="font-size: 1.15rem;">Modal Title</h3>
+        <button class="modal-close" onclick="App.closeModal()" aria-label="Close">&times;</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Client Application Scripts -->
+  <script src="/js/api.js"></script>
+  <script src="/js/state.js"></script>
+  <script src="/js/authView.js"></script>
+  <script src="/js/userView.js"></script>
+  <script src="/js/adminView.js"></script>
+  <script src="/js/app.js"></script>
+
+</body>
+</html>

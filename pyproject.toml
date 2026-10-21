@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexusauth-python"
+version = "2.0.0"
+description = "Python application layer for NexusAuth"
+requires-python = ">=3.11"
+
+[project.scripts]
+nexusauth = "main:main"

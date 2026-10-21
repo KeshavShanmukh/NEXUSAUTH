@@ -1,0 +1,36 @@
+{
+  "name": "nexusauth-platform",
+  "version": "1.0.0",
+  "description": "Authentication, role-based access control, administration, and usage-quota platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node db/seed.js",
+    "migrate": "node db/migrate.js",
+    "test": "node --test",
+    "build": "node --check server.js && python -m compileall -q nexus_py main.py && node -e \"console.log('Build validation passed')\"",
+    "dev": "node --watch server.js",
+    "test:integration": "node tests/runAllTests.js",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "test:python": "python -m unittest discover -s tests -p \"test_python*.py\" -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^14.0.3"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
+  },
+  "private": true
+}
