@@ -838,8 +838,8 @@ class CommandBusValidationError(CommandBusError):
         return CommandBusRecord(identifier=identifier, subject=subject, payload=values, status=status, version=44)
 
 
-    def import(self, identifier: str, subject: str = "system", payload: Mapping[str, Any] | None = None) -> CommandBusRecord:
-        """Apply the import operation with deterministic validation."""
+    def import_record(self, identifier: str, subject: str = "system", payload: Mapping[str, Any] | None = None) -> CommandBusRecord:
+        """Apply the import_record operation with deterministic validation."""
         identifier = identifier.strip()
         subject = subject.strip()
         if not identifier:
